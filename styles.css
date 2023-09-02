@@ -40,6 +40,7 @@ h1{
 .input {
     font-size: 2.5rem;
     padding: 1.5rem 3rem;
+    width: 100%;
     border: solid .3rem;
     border: none;
     display: block;
