@@ -1,0 +1,76 @@
+/*
+  Main COLOR: #087f5b
+  GERY COLER: #343a40 */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1{
+    font-size: 12rem;
+    text-align: center;
+    opacity: 50%;
+    color:#087f5b;
+    margin-top: 12rem;
+
+}
+
+#form{
+    max-width: 100%;
+    margin-top: 6rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 50rem;
+}
+
+
+.input {
+    font-size: 2.5rem;
+    padding: 1.5rem 3rem;
+    border: solid .3rem;
+    border: none;
+    display: block;
+}
+.input:focus {
+    outline-color: #4eb797;
+  }
+
+  .input::placeholder {
+   color: d5d5d5;
+  }
+  
+
+.todo li {
+    text-align: left;
+    list-style-type: none;
+    font-size: 2.5rem;
+    color: #343a40;
+    cursor: pointer;
+    border-top: .3rem solid #087f5b50;
+    padding: 1.5rem 3rem;
+}
+
+.todo li.completed {
+    color: #b6b6b6;
+    text-decoration: line-through;
+}
+
+small {
+    font-size: 1.5rem;
+    color: #b5b5b5;
+    margin-top: 4rem;
+    text-align: center;
+}
