@@ -26,6 +26,7 @@ function addTodo(todo){
         todoEl.innerText = todoText
 
         todoUL.appendChild(todoEl)
+        input.value = null
 
     }
 
