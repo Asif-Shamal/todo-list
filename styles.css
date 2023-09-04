@@ -1,15 +1,47 @@
-/*
-  Main COLOR: #087f5b
-  GERY COLER: #343a40 */
-
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+:root {
+    --primary-color:#000;
+    --secondary-color:#fff;
+    --ternary-color:#999;
+}
+
+html {
+    transition: all 0.5s ease-in;
+}
+
+html.dark {
+    --primary-color:#fff;
+    --secondary-color:#333;
+    --ternary-color:#c8c8c8;
+}
+
+html.dark {
+    background-color: #111;
+    color: var(--primary-color);
+}
+
 html {
     font-size: 62.5%;
     font-family: sans-serif;
+}
+
+.toggle {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 0;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    position: absolute;
+    top: 5%;
+}
+
+.toggle:focus {
+    outline: none;
 }
 
 body {
@@ -23,7 +55,7 @@ body {
 h1{
     font-size: 12rem;
     text-align: center;
-    opacity: 50%;
+    opacity: 80%;
     color:#087f5b;
     margin-top: 12rem;
 
@@ -44,13 +76,17 @@ h1{
     border: solid .3rem;
     border: none;
     display: block;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    border-bottom:.3rem solid #087f5b50; ;
 }
 .input:focus {
     outline-color: #4eb797;
   }
 
-  .input::placeholder {
-   color: d5d5d5;
+.input::placeholder {
+   color: var(--ternary-color);
   }
   
 
@@ -62,6 +98,8 @@ h1{
     cursor: pointer;
     border-top: .3rem solid #087f5b50;
     padding: 1.5rem 3rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .todo li.completed {
