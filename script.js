@@ -4,6 +4,14 @@ const input = document.getElementById('input')
 const toggle = document.querySelector('.toggle')
 
 
+// Local Storage
+const todo = JSON.parse(localStorage.getItem('todo'))
+if (todo) {
+    todo.forEach(todo  => addTodo(todo))
+}
+
+
+
 // Dark mode
 toggle.addEventListener('click', (e) =>{
     const html = document.querySelector('html')
