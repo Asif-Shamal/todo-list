@@ -43,18 +43,41 @@ function addTodo(todo){
 
         todoEl.innerText = todoText
 
-        todoEl.addEventListener('click', ()=>
-         todoEl.classList.toggle('completed'))
-
+        todoEl.addEventListener('click', ()=>{
+         todoEl.classList.toggle('completed')
+         updateLS()
+    })
         todoEl.addEventListener('contextmenu', (e)=> {
             e.preventDefault()
 
             todoEl.remove()
+            updateLS()
         })
     
         todoUL.appendChild(todoEl)
         input.value = null
 
+
+        updateLS()
     }
 
+}
+
+
+
+
+// Local storage
+function updateLS() {
+    todosEl = document.querySelectorAll('li')
+
+    const todo = []
+
+    todosEl.forEach(todoEl => {
+        todo.push({
+            text: todoEl.innerText,
+            completed: todoEl.classList.contains('completed')
+        })
+    })
+
+    localStorage.setItem('todo', JSON.stringify(todo))
 }
